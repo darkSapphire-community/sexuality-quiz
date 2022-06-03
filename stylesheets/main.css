@@ -1,0 +1,138 @@
+/* import color schemes stylesheet */
+@import "./schemes.css";
+
+
+/* General Variable definitions */
+:root{
+  --p-font-size: 13 pt;
+  --h1-font-size: 24pt;
+  --h1-top-bottom-margin: 21px;
+}
+
+
+/* General Page Styles */
+
+body{
+  background-color: var(--page-background-color);
+  min-height: 100%;
+}
+
+p, h1, h2, h3{
+  color: var(--main-text-color);
+}
+
+p {
+  font-size: var(--p-font-size);
+}
+
+h1{
+  font-size: var(--h1-font-size);
+  font-family: sans-serif;
+  margin-top: var(--h1-top-bottom-margin);
+  margin-bottom: var(--h1-top-bottom-margin);
+}
+
+h3{
+  font-family: sans-serif;
+}
+
+header, footer{
+  background-color: var(--header-footer-back-color);
+  padding: 2px 32px 2px 32px;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+header{
+  top: 0;
+}
+
+footer{
+  bottom: 0;
+}
+
+#first-p{
+  margin-top: calc(16px + var(--h1-font-size) + (var(--h1-top-bottom-margin) * 2));
+}
+
+#quiz-container{
+  background-color: var(--quiz-container-background-color-1);
+  border: 4px solid var(--border-color-1);
+  width: calc(160px + (128% * 0.33));
+  margin: auto;
+}
+
+
+/* Quiz Styles */
+
+.question-container{
+  display: grid;
+}
+
+.question-container h3{
+  padding-top: 0.9em;
+  text-align: center;
+  height: 100%;
+  margin-top: 0px;
+}
+
+.question{
+  border: 2px solid var(--border-color-1);
+  border-bottom: 6px solid var(--border-color-1);
+  font-size: calc(12pt + 1vw + 1vh)
+}
+
+.answer-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.answer{
+  border: 2px solid var(--border-color-2);
+  margin: -2px 0px 0px 0px;
+  padding: 4px 6px 4px 6px;
+  text-align: center;
+  min-height: calc(12px + 18vh);
+}
+
+.answer:hover{
+  background-color: var(--answer-hover-color);
+}
+
+.answer p{
+  font-size: calc(8pt + 1vw + 1vh);
+  font-family: sans-serif;
+}
+
+/* Results Styles */
+
+#results-container{
+  display: none;
+}
+
+#cont-quiz{
+  border-radius: 0;
+  background-color: var(--cont-button-bg-col);
+  font-size: 15pt;
+  margin: 4px calc(50% - 4em) 4px calc(50% - 4em);
+  border: 3px solid black;
+}
+
+#results-nav{
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+}
+
+#results-nav li{
+  flex: 1%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 15pt;
+  border: 3px solid var(--border-color-1);
+}
+
+.res-content{
+  min-height: 40vh;
+}

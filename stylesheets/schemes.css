@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: light) {
+  :root{
+    --page-background-color: #fff;
+    --header-footer-back-color: #aaa;
+    --main-text-color: #000;
+    --border-color-1: #000;
+    --border-color-2: #000;
+    --quiz-container-background-color-1: #fff;
+    --answer-hover-color: #aaa;
+    --cont-button-bg-col: #bbb;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --page-background-color: #000;
+    --header-footer-back-color: #2a2a2a;
+    --main-text-color: #fff;
+    --border-color-1: #222;
+    --border-color-2: #1a1a1a;
+    --quiz-container-background-color-1: #494949;
+    --answer-hover-color: #333;
+    --cont-button-bg-col: #777;
+  }
+}

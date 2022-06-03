@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sexuality Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css" media="screen"/>
+  </head>
+  <script>
+    function displayResults(){
+      document.getElementById('results-container').style.display = "block";
+      document.getElementById('quiz').style.display = "none";
+    }
+
+    function continueQuiz(){
+      document.getElementById('results-container').style.display = "none";
+      document.getElementById('quiz').style.display = "block";
+    }
+  </script>
+  <body>
+    <!-- Header Bar -->
+    <header>
+      <h1>Sexuality Quiz</h1>
+    </header>
+
+    <!-- Description -->
+    <p id="first-p">The below quiz is designed to help you discover where you lie on various models of sexualality spectrums.</p>
+
+    <!-- Quiz Container Div -->
+    <div id="quiz-container">
+
+      <!-- Quiz -->
+      <div id="quiz">
+        <div class="question-container">
+          <div class="question"><h3>Which sex do you find yourself sexually attracted to?</h3></div>
+          <div class="answer-container">
+            <div class="answer">
+              <p>The Opposite Sex</p>
+            </div>
+            <div class="answer">
+              <p>The Same Sex</p>
+            </div>
+            <div class="answer" onclick="displayResults()">
+              <p>Both Sexes</p>
+            </div>
+            <div class="answer">
+              <p>Neither Sex</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="results-container">
+        <button id="cont-quiz" type="button" name="continueQuiz"v onclick="continueQuiz()">Continue Quiz</button>
+        <div>
+          <ul id="results-nav">
+            <li style="border-bottom: var(--quiz-container-background-color-1);">model 1</li>
+            <li>model 2</li>
+            <li>model 3</li>
+            <li>model 4</li>
+          </ul>
+        </div>
+        <div id="res-content-1" class="res-content">
+          <p>Results will be displayed in this area</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <p>This page does not collect any data about you or your responses so you don't have to worry about being judged.</p>
+
+    <!-- Footer bar -->
+    <footer>
+      <p>This was created by @darkSapphire-community on github, if you would like to contribute, please check the project out <a href="https://github.com/darkSapphire-community/sexuality-quiz">here</a>.
+    </footer>
+  </body>
+</html>
