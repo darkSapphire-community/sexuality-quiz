@@ -1,0 +1,140 @@
+[
+  {
+    "question":"Which sex do you find yourself sexually attracted to?",
+    "answers":[
+      {
+        "answer":"The Opposite Sex",
+        "results":[
+          {
+            "att":"heterosexual",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"The Same Sex",
+        "results":[
+          {
+            "att":"homosexual",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"All Sexes",
+        "results":[
+          {
+            "att":"heterosexual",
+            "value":10
+          },
+          {
+            "att":"homosexual",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"No Sexes",
+        "results":[
+          {
+            "att":"allsexual",
+            "value":-10
+          }
+        ]
+      }
+    ],
+    "max":10
+  },
+  {
+    "question":"Which sex do you find yourself romantically attracted to?",
+    "answers":[
+      {
+        "answer":"The Opposite Sex",
+        "results":[
+          {
+            "att":"heteroromantic",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"The Same Sex",
+        "results":[
+          {
+            "att":"homoromantic",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"All Sexes",
+        "results":[
+          {
+            "att":"heteroromantic",
+            "value":10
+          },
+          {
+            "att":"homoromantic",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"No Sexes",
+        "results":[
+          {
+            "att":"allromantic",
+            "value":-10
+          }
+        ]
+      }
+    ],
+    "max":10
+  },
+  {
+    "question":"Which sex do you find yourself generally attracted to?",
+    "answers":[
+      {
+        "answer":"The Opposite Sex",
+        "results":[
+          {
+            "att":"hetero",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"The Same Sex",
+        "results":[
+          {
+            "att":"homo",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"All Sexes",
+        "results":[
+          {
+            "att":"hetero",
+            "value":10
+          },
+          {
+            "att":"homo",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"No Sexes",
+        "results":[
+          {
+            "att":"all",
+            "value":-10
+          }
+        ]
+      }
+    ],
+    "max":10
+  }
+]
