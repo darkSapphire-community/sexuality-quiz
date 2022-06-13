@@ -14,8 +14,8 @@ Once the project has reached a useable stage I intend to publish the site and he
 
 ## Roadmap
 Here is the rough plan of development in order:
-1. Setup basic website layout and formatting
-2. Define specification for how questions are defined and what values are given to answers to be later used in analysis.
-3. Implement basic quiz to ask base questions.
+1. Setup basic website layout and formatting *-complete*
+2. Define specification for how questions are defined and what values are given to answers to be later used in analysis. *-complete*
+3. Implement basic quiz to ask base questions.*-complete*
 4. Implement meaningful and diverse analysis of the results.
 5. Enable users to answer more questions.

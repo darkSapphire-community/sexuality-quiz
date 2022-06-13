@@ -4,7 +4,7 @@
 
 /* General Variable definitions */
 :root{
-  --p-font-size: 13 pt;
+  --p-font-size: 13pt;
   --h1-font-size: 24pt;
   --h1-top-bottom-margin: 21px;
 }
@@ -16,6 +16,7 @@ body{
   background-color: var(--page-background-color);
   min-height: 100%;
   padding-top: calc(16px + var(--h1-font-size) + (var(--h1-top-bottom-margin) * 2));
+  padding-bottom: calc(var(--h1-font-size) + var(--h1-top-bottom-margin));
 }
 
 p, h1, h2, h3{

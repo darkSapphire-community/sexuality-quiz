@@ -48,7 +48,11 @@ Here's an example question to help show visually how questions are formatted.
       ]
     }
   ],
-  "max":10
+  "max":{
+    "hetero":10,
+    "homo":10,
+    "other":10
+  }
 }
 ```
 
@@ -85,9 +89,9 @@ The attributes useable are as follows:
 }
 ```
 
-Those with out the sexual or romantic suffix will affect both. The "other" tag relates to all genders except female/male/non-binary as it would not be practicable to have tags for every gender ever. The "all" tag effects all values, the "allsexual" effects all sexual values and the "allromantic" attribute affects all romantic values.
+Those with out the sexual or romantic suffix will affect both. The "other" tag relates to all genders except female/male as it is challenging to include every gender ever and perhaps other genders can be included in another version of this quiz. The "all" tag effects all values, the "allsexual" effects all sexual values and the "allromantic" attribute affects all romantic values.
 
 There are no values to align with asexual umbrellas or micro-labels as I intend to include these either in a separate quiz or in a later stage of the project.
 
 ### Max
-The max label declares the amount by which the question can increase at the most. essentially just assign the largest value that you assigned to any attribute in the results section for all answers. This is used so that if the max = 10 and the highest increase is 5, this moves them towards asexuality.
+The max label declares the amount by which the question can increase at the most. essentially just assign the largest value that you assigned to any attribute in the results section for all answers. This is used so that if the max = 10 and the highest increase is 5, this moves them towards asexuality or a lack of attraction to that gender.

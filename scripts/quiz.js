@@ -34,7 +34,10 @@ function displayQuestion(quesCat, quesNum){
       updtr = updtr.concat("{'att':'", question.answers[i].results[ii].att, "',");
       updtr = updtr.concat("'value':'", question.answers[i].results[ii].value, "'}");
     }
-    updtr = updtr.concat("]); nextQues()");
+    //max values
+    updtr = updtr.concat("], {'hetero':'", question.max.hetero);
+    updtr = updtr.concat("', 'homo':'", question.max.homo);
+    updtr = updtr.concat("', 'other':'", question.max.other, "'});");
     //other info
     answr.setAttribute("onclick", updtr);
     answr.className = "answer";
@@ -50,7 +53,7 @@ function displayQuestion(quesCat, quesNum){
 }
 
 //Update alignment values
-function updateAlignment(updts){
+function updateAlignment(updts,mx){
   for(var i=0; i<updts.length; i++){
     if(updts[i].att.includes("all")){ //update all values
       for(var ii=0; ii<alignments.length; ii++){
@@ -61,20 +64,30 @@ function updateAlignment(updts){
       alignment[updts[i].att] += parseInt(updts[i].value);
     }
   }
+  //update max values
+  max.hetero += parseInt(mx.hetero);
+  max.homo += parseInt(mx.homo);
+  max.other += parseInt(mx.other);
+
+  //call up the next question
+  nextQues();
 }
 
 //function to increment question
 function nextQues(){
-  if(asked.asking[0] == 'init'){
-    asked.initial ++;
-    asked.asking[1] = asked.initial;
-    displayQuestion(asked.asking[0], asked.asking[1]);
+  if(asking[0] == 'init'){
+    asking[1] ++;
+    if(asking[1] < initialQuestions.length){
+      displayQuestion(asking[0], asking[1]);
+    }else{
+      displayResults();
+    }
   }
 }
 
 
 //setup register for asked questions
-var asked = {"asking":['init',0],"initial":0,"other":[]}
+var asking = ['init',0]
 
 //setup values for recording and analysis
 var alignment = {
@@ -86,8 +99,6 @@ var alignment = {
   "heteroromantic":0,
   "homosexual":0,
   "homoromantic":0,
-  "ceterosexual":0,
-  "ceteroromantic":0,
   "othersexual":0,
   "otherromantic":0,
 }
@@ -101,8 +112,13 @@ const alignments = [
   "heteroromantic",
   "homosexual",
   "homoromantic",
-  "ceterosexual",
-  "ceteroromantic",
   "othersexual",
   "otherromantic",
 ]
+
+//setup var for total possible score
+var max = {
+  "hetero":0,
+  "homo":0,
+  "other":0
+}

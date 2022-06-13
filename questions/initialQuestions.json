@@ -1,98 +1,6 @@
 [
   {
-    "question":"Which sex do you find yourself sexually attracted to?",
-    "answers":[
-      {
-        "answer":"The Opposite Sex",
-        "results":[
-          {
-            "att":"heterosexual",
-            "value":10
-          }
-        ]
-      },
-      {
-        "answer":"The Same Sex",
-        "results":[
-          {
-            "att":"homosexual",
-            "value":10
-          }
-        ]
-      },
-      {
-        "answer":"All Sexes",
-        "results":[
-          {
-            "att":"heterosexual",
-            "value":10
-          },
-          {
-            "att":"homosexual",
-            "value":10
-          }
-        ]
-      },
-      {
-        "answer":"No Sexes",
-        "results":[
-          {
-            "att":"allsexual",
-            "value":-10
-          }
-        ]
-      }
-    ],
-    "max":10
-  },
-  {
-    "question":"Which sex do you find yourself romantically attracted to?",
-    "answers":[
-      {
-        "answer":"The Opposite Sex",
-        "results":[
-          {
-            "att":"heteroromantic",
-            "value":10
-          }
-        ]
-      },
-      {
-        "answer":"The Same Sex",
-        "results":[
-          {
-            "att":"homoromantic",
-            "value":10
-          }
-        ]
-      },
-      {
-        "answer":"All Sexes",
-        "results":[
-          {
-            "att":"heteroromantic",
-            "value":10
-          },
-          {
-            "att":"homoromantic",
-            "value":10
-          }
-        ]
-      },
-      {
-        "answer":"No Sexes",
-        "results":[
-          {
-            "att":"allromantic",
-            "value":-10
-          }
-        ]
-      }
-    ],
-    "max":10
-  },
-  {
-    "question":"Which sex do you find yourself generally attracted to?",
+    "question":"Which sex/gender do you find yourself most attracted to (sexually and/or romantically)?",
     "answers":[
       {
         "answer":"The Opposite Sex",
@@ -113,7 +21,7 @@
         ]
       },
       {
-        "answer":"All Sexes",
+        "answer":"Both/All Sexes",
         "results":[
           {
             "att":"hetero",
@@ -122,11 +30,15 @@
           {
             "att":"homo",
             "value":10
+          },
+          {
+            "att":"other",
+            "value":10
           }
         ]
       },
       {
-        "answer":"No Sexes",
+        "answer":"Neither/No Sexes",
         "results":[
           {
             "att":"all",
@@ -135,6 +47,228 @@
         ]
       }
     ],
-    "max":10
+    "max":{
+      "hetero":10,
+      "homo":10,
+      "other":10
+    }
+  },
+  {
+    "question":"If you had to choose between two people of the same gender as you, would more feminine or masculine behaviours attract you more?",
+    "answers":[
+      {
+        "answer":"Those associted with the opposite gender",
+        "results":[
+          {
+            "att":"hetero",
+            "value":5
+          },
+          {
+            "att":"heteroromantic",
+            "value":5
+          }
+        ]
+      },
+      {
+        "answer":"Those associted with the same gender",
+        "results":[
+          {
+            "att":"homo",
+            "value":5
+          },
+          {
+            "att":"homoromantic",
+            "value":5
+          }
+        ]
+      },
+      {
+        "answer":"Both/Neither",
+        "results":[
+          {
+            "att":"other",
+            "value":5
+          },
+          {
+            "att":"otherromantic",
+            "value":5
+          }
+        ]
+      }
+    ],
+    "max":{
+      "hetero":10,
+      "homo":10,
+      "other":10
+    }
+  },
+  {
+    "question":"Have you ever been in a sexual/romantic relationship with someone of the SAME gender?",
+    "answers":[
+      {
+        "answer":"No, none",
+        "results":[]
+      },
+      {
+        "answer":"Yes, but rarely",
+        "results":[
+          {
+            "att":"homo",
+            "value":5
+          }
+        ]
+      },
+      {
+        "answer":"Yes, often",
+        "results":[
+          {
+            "att":"homo",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"yes, they are all with the same gender",
+        "results":[
+          {
+            "att":"homo",
+            "value":15
+          }
+        ]
+      }
+    ],
+    "max":{
+      "hetero":0,
+      "homo":15,
+      "other":0
+    }
+  },
+  {
+    "question":"Have you ever been in a sexual/romantic relationship with someone of the OPPOSITE gender?",
+    "answers":[
+      {
+        "answer":"No, none",
+        "results":[]
+      },
+      {
+        "answer":"Yes, but rarely",
+        "results":[
+          {
+            "att":"hetero",
+            "value":5
+          }
+        ]
+      },
+      {
+        "answer":"Yes, often",
+        "results":[
+          {
+            "att":"hetero",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"yes, they are all with the opposite gender",
+        "results":[
+          {
+            "att":"hetero",
+            "value":15
+          }
+        ]
+      }
+    ],
+    "max":{
+      "hetero":15,
+      "homo":0,
+      "other":0
+    }
+  },
+  {
+    "question":"Have you ever been in a sexual/romantic relationship with someone not of a binary gender?",
+    "answers":[
+      {
+        "answer":"No, none",
+        "results":[]
+      },
+      {
+        "answer":"Yes, but rarely",
+        "results":[
+          {
+            "att":"other",
+            "value":5
+          }
+        ]
+      },
+      {
+        "answer":"Yes, often",
+        "results":[
+          {
+            "att":"other",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"yes, none are with binary gendered people",
+        "results":[
+          {
+            "att":"other",
+            "value":15
+          }
+        ]
+      }
+    ],
+    "max":{
+      "hetero":0,
+      "homo":0,
+      "other":15
+    }
+  },
+  {
+    "question":"If a romantic partner asks to have sex with you for the first time, what would you do?",
+    "answers":[
+      {
+        "answer":"Get to it without hesitation",
+        "results":[
+          {
+            "att":"all",
+            "value":15
+          }
+        ]
+      },
+      {
+        "answer":"It really depends on how they asked",
+        "results":[
+          {
+            "att":"other",
+            "value":5
+          }
+        ]
+      },
+      {
+        "answer":"Have sex, but only because they want to",
+        "results":[
+          {
+            "att":"other",
+            "value":10
+          }
+        ]
+      },
+      {
+        "answer":"Tell them your not interested",
+        "results":[
+          {
+            "att":"other",
+            "value":15
+          }
+        ]
+      }
+    ],
+    "max":{
+      "hetero":0,
+      "homo":0,
+      "other":15
+    }
   }
 ]
